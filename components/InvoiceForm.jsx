@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import Link from 'next/link';
 import axios from 'axios';
 
 const InvoiceForm = () => {
@@ -55,6 +56,8 @@ const InvoiceForm = () => {
       });
   };
 
+
+
   return (
     <Form onSubmit={generatePDF}>
       <Form.Group controlId="invoiceTitle">
@@ -102,9 +105,11 @@ const InvoiceForm = () => {
         </Form.Control>
       </Form.Group>  
 
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
+      <Link href='https://invoice-generator-backend.onrender.com/generate-pdf'>
+        <Button variant="primary">
+            Submit
+        </Button>
+      </Link>
     </Form>
   );
 };
