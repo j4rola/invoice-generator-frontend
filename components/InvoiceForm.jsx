@@ -78,7 +78,7 @@ const InvoiceForm = () => {
           <option value="Net 60">Net 60</option>
           <option value="Net 90">Net 90</option>
         </Form.Control>
-      </Form.Group>
+      </Form.Group>  
 
       <Button variant="primary" type="submit">
         Submit
