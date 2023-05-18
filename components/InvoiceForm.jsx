@@ -3,16 +3,20 @@ import { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import Link from 'next/link';
 import axios from 'axios';
+import { useInvoiceContext } from '../app/context/context'
+
+
 
 const InvoiceForm = () => {
+
+  const { data, setData} = useInvoiceContext('');
+
   const [formData, setFormData] = useState({
     title: '',
     amount: '',
     date: '',
     paymentTerms: ''
   });
-
-  const [testVar, updateTestVar] = useState('')
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -58,9 +62,7 @@ const InvoiceForm = () => {
       });
   };
 
-  const test = () => {
-    updateTestVar('TESTINGINGING')
-  }
+  
 
 
 
@@ -113,13 +115,17 @@ const InvoiceForm = () => {
       </Form.Group>  
 
       <Link href='https://invoice-generator-backend.onrender.com/generate-pdf'>
-        <Button variant="primary" onClick={test}>
+        <Button variant="primary">
             Submit
         </Button>
       </Link>
+      
     </Form>
-    <p>{testVar}</p>
-    </>
+    <Button variant="primary" onClick={() => setData('testing')}>
+        test
+    </Button>
+    <p>{data}</p>
+    </>  
   );
 };
 

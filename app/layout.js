@@ -2,7 +2,7 @@ import './globals.css';
 import Header from '@/components/Header'; 
 import { Inter } from 'next/font/google'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { InvoiceContextProvider } from './context/context';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,11 +15,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
 
-      
-      <body>{children}
-      
-      </body>  
-      
+      <InvoiceContextProvider> 
+        <body>{children}
+        
+        </body>  
+      </InvoiceContextProvider>
 
     </html>
   )
