@@ -33,8 +33,30 @@ const InvoiceForm = () => {
       });
   };
 
+  const generatePDF = () => {
+    fetch('https://invoice-generator-backend.onrender.com/generate-pdf')
+      .then(response => response.blob())
+      .then(blob => {
+        // Create a temporary download link
+        const downloadLink = document.createElement('a');
+        downloadLink.href = URL.createObjectURL(blob);
+        downloadLink.download = 'document.pdf';
+  
+        // Trigger the download
+        downloadLink.click();
+  
+        // Clean up the temporary download link
+        URL.revokeObjectURL(downloadLink.href);
+        downloadLink.remove();
+      })
+      .catch(error => {
+        // Handle error
+        console.error('API Error:', error);
+      });
+  };
+
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form onSubmit={generatePDF}>
       <Form.Group controlId="invoiceTitle">
         <Form.Label>Invoice Title:</Form.Label>
         <Form.Control
