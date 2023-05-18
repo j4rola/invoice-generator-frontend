@@ -22,7 +22,7 @@ const InvoiceForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Perform API request using Axios
-    axios.post('https://invoice-generator-backend.onrender.com/generate-pdf', formData)
+    axios.get('https://invoice-generator-backend.onrender.com/generate-pdf')
       .then(response => {
         // Handle success response
         console.log('API Response:', response.data);
