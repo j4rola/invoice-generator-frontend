@@ -12,6 +12,8 @@ const InvoiceForm = () => {
     paymentTerms: ''
   });
 
+  const [testVar, updateTestVar] = useState('')
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -56,9 +58,14 @@ const InvoiceForm = () => {
       });
   };
 
+  const test = () => {
+    updateTestVar('TESTINGINGING')
+  }
+
 
 
   return (
+    <>
     <Form onSubmit={generatePDF}>
       <Form.Group controlId="invoiceTitle">
         <Form.Label>Invoice Title:</Form.Label>
@@ -106,11 +113,13 @@ const InvoiceForm = () => {
       </Form.Group>  
 
       <Link href='https://invoice-generator-backend.onrender.com/generate-pdf'>
-        <Button variant="primary">
+        <Button variant="primary" onClick={test}>
             Submit
         </Button>
       </Link>
     </Form>
+    <p>{testVar}</p>
+    </>
   );
 };
 
