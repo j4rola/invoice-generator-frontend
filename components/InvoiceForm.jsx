@@ -114,7 +114,7 @@ const InvoiceForm = () => {
         </Form.Control>
       </Form.Group>  
 
-      <Link href='https://invoice-generator-backend.onrender.com/generate-pdf?param1=xfactor&param2=value2'>
+      <Link href={`https://invoice-generator-backend.onrender.com/generate-pdf?paymentTerms=${formData.paymentTerms}&param2=value2`}>
         <Button variant="primary">  
             Submit
         </Button>
