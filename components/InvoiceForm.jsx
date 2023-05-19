@@ -92,7 +92,7 @@ const InvoiceForm = () => {
       <Form.Group controlId="invoiceDate">
         <Form.Label>Invoice Date:</Form.Label>
         <Form.Control
-          type="text"
+          type="date"
           name="date"
           value={formData.date}
           onChange={handleChange}
@@ -114,7 +114,7 @@ const InvoiceForm = () => {
         </Form.Control>
       </Form.Group>  
 
-      <Link href={`https://invoice-generator-backend.onrender.com/generate-pdf?paymentTerms=${formData.paymentTerms}&param2=value2`}>
+      <Link href={`https://invoice-generator-backend.onrender.com/generate-pdf?paymentTerms=${formData.invoiceDate}&invoiceDate=${formData.paymentTerms}&invoiceAmount=${formData.invoiceAmount}`}>
         <Button variant="primary">  
             Submit
         </Button>

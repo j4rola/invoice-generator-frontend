@@ -9,8 +9,16 @@ export default function Home() {
     const { data, setData } = useInvoiceContext();
     console.log(data)
   return (
-    <div id='test'>
-      {data}      
+    <>
+    <div id='paymentTerms'>
+            
     </div>
+    <div id='invoiceDate'>
+          
+  </div>
+  <div id='invoiceAmount'>
+      
+  </div>
+  </>
   )
 }
