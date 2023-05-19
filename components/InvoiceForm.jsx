@@ -125,6 +125,7 @@ const InvoiceForm = () => {
         test
     </Button>
     <p>{data}</p>
+    <Link href='/invoice'>go</Link>
     </>  
   );
 };
