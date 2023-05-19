@@ -10,6 +10,8 @@ export default function Home() {
     console.log(data)
   return (
     <>
+    <h1 id='title'></h1>
+    
     <div id='paymentTerms'>
             
     </div>

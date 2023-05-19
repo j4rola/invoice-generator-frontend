@@ -68,7 +68,8 @@ const InvoiceForm = () => {
 
   return (
     <>
-    <Form onSubmit={generatePDF}>
+
+    <Form className='px-5' onSubmit={generatePDF}>
       <Form.Group controlId="invoiceTitle">
         <Form.Label>Invoice Title:</Form.Label>
         <Form.Control
@@ -114,7 +115,7 @@ const InvoiceForm = () => {
         </Form.Control>
       </Form.Group>  
 
-      <Link href={`https://invoice-generator-backend.onrender.com/generate-pdf?paymentTerms=${formData.date}&invoiceDate=${formData.paymentTerms}&invoiceAmount=${formData.amount}`}>
+      <Link href={`https://invoice-generator-backend.onrender.com/generate-pdf?title=${formData.title}&paymentTerms=${formData.paymentTerms}&invoiceDate=${formData.date}&invoiceAmount=${formData.amount}`}>
         <Button variant="primary">  
             Submit
         </Button>
