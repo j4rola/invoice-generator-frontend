@@ -73,7 +73,7 @@ const InvoiceForm = () => {
 
     <h1 className='m-5'>Invoice Generator</h1>
     
-    <Form className='px-5 w-75' onSubmit={generatePDF}>
+    <Form className='px-5 w-75' >
       <Form.Group controlId="invoiceTitle">
         <Form.Label>Invoice Title:</Form.Label>   
         <Form.Control
