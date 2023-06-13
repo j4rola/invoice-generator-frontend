@@ -10,7 +10,7 @@ export default function Home() {
     console.log(data)
   return (
     <>
-    <div className='w-100 red' ></div>
+    <div className='w-100 red' >test</div>
     <h1 id='title'></h1>
     
     <div id='paymentTerms'>
