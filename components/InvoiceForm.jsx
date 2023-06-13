@@ -67,9 +67,12 @@ const InvoiceForm = () => {
 
 
   return (
-    <>
 
-    <Form className='px-5' onSubmit={generatePDF}>
+  <div className='w-100 flex'>
+
+    <h1 className='m-5'>Invoice Generator</h1>
+    
+    <Form className='px-5 w-75' onSubmit={generatePDF}>
       <Form.Group controlId="invoiceTitle">
         <Form.Label>Invoice Title:</Form.Label>   
         <Form.Control
@@ -116,19 +119,22 @@ const InvoiceForm = () => {
         </Form.Control>
       </Form.Group>  
 
-      <Link href={`https://invoice-generator-backend.onrender.com/generate-pdf?title=${formData.title}&paymentTerms=${formData.paymentTerms}&invoiceDate=${formData.date}&invoiceAmount=${formData.amount}`}>
+      
+      
+    </Form>
+     <Link className='m-5' href={`https://invoice-generator-backend.onrender.com/generate-pdf?title=${formData.title}&paymentTerms=${formData.paymentTerms}&invoiceDate=${formData.date}&invoiceAmount=${formData.amount}`}>
         <Button variant="primary">  
             Submit
         </Button>
       </Link>
-      
-    </Form>
-    <Button variant="primary" onClick={() => setData('testing')}>
+    <Button variant="primary" onClick={() => setData('testingg')}>
         test
     </Button>
     <p>{data}</p>
     <Link href='/invoice'>go</Link>
-    </>  
+    
+  </div>  
+
   );
 };
 
