@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Home() {  
 
-    const { data, setData } = useInvoiceContext();  
+    const { data, setData } = useInvoiceContext();    
     console.log(data)
   return (
     <>
