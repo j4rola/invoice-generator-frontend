@@ -15,7 +15,7 @@ export default function Home() {
     <h1 id='title' style={{color: 'red'}} className='flex'></h1> 
 
     <div className='flex-row'>
-      <div>Payment Terms:</div>
+      <div className='mx-5'>Payment Terms:</div>
       <div id='paymentTerms'>  
     </div>
             
