@@ -108,3 +108,7 @@ a {
     color-scheme: dark;
   }
 }
+
+.red {
+  background-color: red;
+}
