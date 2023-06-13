@@ -83,7 +83,7 @@ const InvoiceForm = () => {
       <Form.Group controlId="invoiceAmount">
         <Form.Label>Invoice Amount:</Form.Label>
         <Form.Control
-          type="text"
+          type="number"
           name="amount"
           value={formData.amount}
           onChange={handleChange}
@@ -108,7 +108,8 @@ const InvoiceForm = () => {
           value={formData.paymentTerms}
           onChange={handleChange}
         >
-          <option value="">-- Select Payment Terms --</option>
+          <option value="">-- Select Payment Terms --</option>  
+          <option value="N/A">N/A</option>
           <option value="Net 30">Net 30</option>
           <option value="Net 60">Net 60</option>
           <option value="Net 90">Net 90</option>

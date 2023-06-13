@@ -1,15 +1,16 @@
 'use client'
-import { useInvoiceContext } from '../context/context';
-import Link from 'next/link'
+import { useInvoiceContext } from '../context/context'; 
+import Link from 'next/link'; 
 
 
 
-export default function Home() {
+export default function Home() {  
 
-    const { data, setData } = useInvoiceContext();
+    const { data, setData } = useInvoiceContext();  
     console.log(data)
   return (
     <>
+    <div className='w-100 bg-dark' ></div>
     <h1 id='title'></h1>
     
     <div id='paymentTerms'>
