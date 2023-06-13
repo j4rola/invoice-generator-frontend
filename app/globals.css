@@ -123,3 +123,12 @@ a {
 .bord {
   border-top: 8px solid black;
 }
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+} 
+
+
