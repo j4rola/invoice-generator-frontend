@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
     <div className='w-100 red' >test</div>
-    <h1 id='title'></h1>
+    <h1 id='title' style={{color: 'red'}}></h1>
     
     <div id='paymentTerms'>
             
