@@ -10,8 +10,8 @@ export default function Home() {
     console.log(data)
   return (
     <>
-    <div className='w-100 red' >test</div>
-    <h1 id='title' style={{color: 'red'}}></h1>
+    <div className='w-100 red' ></div>
+    <h1 id='title' style={{color: 'red'}} className='flex'></h1>
     
     <div id='paymentTerms'>
             
