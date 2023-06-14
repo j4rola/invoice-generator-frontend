@@ -13,8 +13,8 @@ export default function Home() {
     <div className='flex-start p-5'> 
       
       <div className='flex bg-grey border p-3'> 
-        <div className='flex-row'><h5 className='pr-5'>Invoice No.:</h5><h5 id='invoiceNumber'></h5></div>
-        <div className='flex-row'><h5 className='pr-5'>Invoice Date:</h5><h5 id='invoiceDate'></h5></div> 
+        <div className='flex-row'><h5 className='px-5'>Invoice No.:</h5><h5 id='invoiceNumber'></h5></div>
+        <div className='flex-row'><h5 className='px-5'>Invoice Date:</h5><h5 id='invoiceDate'></h5></div> 
       </div>
        
 
@@ -22,11 +22,11 @@ export default function Home() {
     
     <div className='flex bord'>  
       
-      <div className='w-100 red' ></div> 
+      <div className='w-100 red'></div> 
       <h1 id='invoiceNumber' style={{color: 'red'}} className='flex'></h1> 
 
-      <div className='flex-row'>
-        <div>Payment Terms:</div>
+      <div className='flex-row'> 
+        <div>Payment Terms:</div>  
         <div id='paymentTerms'>  
       </div>
                 
