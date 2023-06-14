@@ -10,6 +10,7 @@ export default function Home() {
     console.log(data)
   return (
   <>
+    <div className='flex-row bg-light'><h3>Invoice No.:</h3><h3 id='invoiceNumber'></h3></div>
     <div className='flex bord'>
       
       <div className='w-100 red' ></div> 
