@@ -10,8 +10,14 @@ export default function Home() {
     console.log(data)
   return (
   <>
-    <div className='flex-row bg-light'><h3>Invoice No.:</h3><h3 id='invoiceNumber'></h3></div>
-    <div className='flex bord'>
+    <div className='flex-start bg-gray p-5'> 
+      
+      <div className='flex-row'><h3>Invoice No.:</h3><h3 id='invoiceNumber'></h3></div>
+      <div className='flex-row'><h3>Invoice Date:</h3><h3 id='invoiceDate'></h3></div> 
+
+    </div>
+    
+    <div className='flex bord'>  
       
       <div className='w-100 red' ></div> 
       <h1 id='invoiceNumber' style={{color: 'red'}} className='flex'></h1> 
