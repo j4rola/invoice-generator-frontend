@@ -9,9 +9,9 @@ import { useInvoiceContext } from '../app/context/context.js';
 
 const InvoiceForm = () => {
 
-  const { data, setData} = useInvoiceContext('');
+  const { data, setData } = useInvoiceContext('');  
 
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({  
     invoiceNumber: '',
     amount: '',
     date: '',
@@ -32,8 +32,6 @@ const InvoiceForm = () => {
 
   <div className='w-100 flex'>
 
-    
-    
     <Form className='px-5 w-75' >
       <Form.Group controlId="invoiceNumber">
         <Form.Label>Invoice Number:</Form.Label>   
@@ -43,7 +41,7 @@ const InvoiceForm = () => {
           value={formData.invoiceNumber}
           onChange={handleChange}
         />
-      </Form.Group>
+    </Form.Group>  
 
       <Form.Group controlId="invoiceAmount">
         <Form.Label>Invoice Amount:</Form.Label>
