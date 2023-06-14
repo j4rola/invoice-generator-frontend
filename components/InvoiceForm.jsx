@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import Link from 'next/link';
 import axios from 'axios';
-import { useInvoiceContext } from '../app/context/context.js'
+import { useInvoiceContext } from '../app/context/context.js'; 
 
 
 
@@ -12,7 +12,7 @@ const InvoiceForm = () => {
   const { data, setData} = useInvoiceContext('');
 
   const [formData, setFormData] = useState({
-    title: '',
+    invoiceNumber: '',
     amount: '',
     date: '',
     paymentTerms: ''
@@ -74,12 +74,12 @@ const InvoiceForm = () => {
     <h1 className='m-5'>Invoice Generator</h1>
     
     <Form className='px-5 w-75' >
-      <Form.Group controlId="invoiceTitle">
-        <Form.Label>Invoice Title:</Form.Label>   
+      <Form.Group controlId="invoiceNumber">
+        <Form.Label>Invoice Number:</Form.Label>   
         <Form.Control
           type="text"
-          name="title"
-          value={formData.title}
+          name="invoiceNumber"
+          value={formData.invoiceNumber}
           onChange={handleChange}
         />
       </Form.Group>
@@ -123,7 +123,7 @@ const InvoiceForm = () => {
       
       
     </Form>
-     <Link className='m-5' href={`https://invoice-generator-backend.onrender.com/generate-pdf?title=${formData.title}&paymentTerms=${formData.paymentTerms}&invoiceDate=${formData.date}&invoiceAmount=${formData.amount}`}>
+     <Link className='m-5' href={`https://invoice-generator-backend.onrender.com/generate-pdf?invoiceNumber=${formData.invoiceNumber}&paymentTerms=${formData.paymentTerms}&invoiceDate=${formData.date}&invoiceAmount=${formData.amount}`}>
         <Button variant="primary">     
             Submit
         </Button>
