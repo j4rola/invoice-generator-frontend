@@ -26,46 +26,7 @@ const InvoiceForm = () => {
       [name]: value
     }));
   };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Perform API request using Axios
-    axios.get('https://invoice-generator-backend.onrender.com/generate-pdf')
-      .then(response => {
-        // Handle success response
-        console.log('API Response:', response.data);
-      })
-      .catch(error => {
-        // Handle error
-        console.error('API Error:', error);
-      });
-  };
-
-  const generatePDF = () => {
-    fetch('https://invoice-generator-backend.onrender.com/generate-pdf')
-      .then(response => response.blob())
-      .then(blob => {
-        // Create a temporary download link
-        const downloadLink = document.createElement('a');
-        downloadLink.href = URL.createObjectURL(blob);
-        downloadLink.download = 'document.pdf';
   
-        // Trigger the download
-        downloadLink.click();
-  
-        // Clean up the temporary download link
-        URL.revokeObjectURL(downloadLink.href);
-        downloadLink.remove();
-      })
-      .catch(error => {
-        // Handle error
-        console.error('API Error:', error);
-      });
-  };
-
-  
-
-
 
   return (
 
