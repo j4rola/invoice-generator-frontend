@@ -12,7 +12,7 @@ export default function Home() {
   <>
     <div className='flex-start p-5'> 
       
-      <div className='flex w-50 bg-grey border p-3'> 
+      <div className='flex bg-grey border p-3'> 
         <div className='flex-row'><h5>Invoice No.:</h5><h5 id='invoiceNumber'></h5></div>
         <div className='flex-row'><h5>Invoice Date:</h5><h5 id='invoiceDate'></h5></div> 
       </div>
