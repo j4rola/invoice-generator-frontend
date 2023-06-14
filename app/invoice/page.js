@@ -13,8 +13,8 @@ export default function Home() {
     <div className='flex-start p-5'> 
       
       <div className='flex w-50 bg-grey border p-3'> 
-        <div className='flex-row'><h3>Invoice No.:</h3><h3 id='invoiceNumber'></h3></div>
-        <div className='flex-row'><h3>Invoice Date:</h3><h3 id='invoiceDate'></h3></div> 
+        <div className='flex-row'><h5>Invoice No.:</h5><h5 id='invoiceNumber'></h5></div>
+        <div className='flex-row'><h5>Invoice Date:</h5><h5 id='invoiceDate'></h5></div> 
       </div>
        
 
