@@ -10,7 +10,7 @@ const LineItem = () => {
         {data ? (
           <div>test</div>
         ) : (
-          <div>testing</div>   
+          <div>testing 1</div>   
         )}
       </div>  
     );
