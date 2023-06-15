@@ -3,7 +3,7 @@ import styles from './page.module.css'
 import Header from '@/components/Header'
 import InvoiceForm from '@/components/InvoiceForm'
 import ToggleSwitch from '@/components/ToggleSwitch'
-import LineItem from '@/components/lineItem'
+import LineItem from '@/components/LineItem'
 
 
 export default function Home() {
