@@ -8,7 +8,7 @@ const LineItem = () => {
     return (
       <div>
         {data ? (
-          <div>test n</div>
+          <div>test</div>
         ) : (
           <div>testing</div>   
         )}
