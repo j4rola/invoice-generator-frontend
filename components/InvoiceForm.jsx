@@ -94,7 +94,7 @@ const InvoiceForm = () => {
       
       
     </Form>
-    <Link className='m-5' href={`https://invoice-generator-backend.onrender.com/generate-pdf?invoiceNumber=${formData.invoiceNumber}&paymentTerms=${formData.paymentTerms}&invoiceDate=${formData.date}&invoiceAmount=${formData.amount}&multiline=${data}&lineItemArray=${lineItemArray}`}>
+    <Link className='m-5' href={`https://invoice-generator-backend.onrender.com/generate-pdf?invoiceNumber=${formData.invoiceNumber}&paymentTerms=${formData.paymentTerms}&invoiceDate=${formData.date}&invoiceAmount=${formData.amount}&multiline=${data}&lineItemArray=${JSON.stringify(lineItemArray)}`}>
       <Button variant="primary">     
         Submit
       </Button>
