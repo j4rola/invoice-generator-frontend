@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { InvoiceContextProvider } from './context/context';
 import { LineContextProvider } from './context/lineContext'; 
+import { LineItemArrayContextProvider } from './context/lineItemArrayContext';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,10 +16,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-
+      <LineItemArrayContextProvider>
         <LineContextProvider>
-            <body>{children}</body> 
+          <body>{children}</body> 
         </LineContextProvider>
+      </LineItemArrayContextProvider>
 
     </html>
   )

@@ -15,7 +15,7 @@ const ToggleSwitch = () => {
 
   return (
     <>
-      <p>{`${data}`}</p>
+      
       <div className="form-check form-switch">
         <input
           className="form-check-input"
